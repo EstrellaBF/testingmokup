@@ -17,3 +17,9 @@
 <hr>
 <input type="text" (keyup)="onNameKeyUp($event)">
 <button (click)="getProfile()">GetProfile</button>
+<div *ngIf="found">
+  <span>{{name}}'s age is {{age}}</span>
+</div>
+
+
+<button (click)="postProfile()">PostProfile</button>
