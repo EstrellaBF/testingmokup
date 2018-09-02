@@ -1,0 +1,19 @@
+<h2>Employee List</h2>
+<ul *ngFor="let employee of employees">
+  <li>{{employee.name}}</li>
+</ul>
+
+
+
+<button (click) = "onTestGet()">Test GET Request</button> <br>
+<p>output: {{getData}}</p>
+<hr>
+
+<input [(ngModel)]="key" type="text" placeholder="llave" id="key" (keyup)="onKey($event)"> {{key}}
+<input [(ngModel)]="value" type="text" placeholder="valor" (keyup)="onValue($event)"> {{value}}
+<button (click) = "onTestPost()">Test POST Request</button> <br>
+<p>output: {{postData}}</p>
+
+<hr>
+<input type="text" (keyup)="onNameKeyUp($event)">
+<button (click)="getProfile()">GetProfile</button>
